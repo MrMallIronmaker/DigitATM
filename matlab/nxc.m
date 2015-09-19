@@ -5,8 +5,8 @@ f1 = imread('thumb1.bmp');
 f2 = imread('thumb2.bmp');
 
 % crop
-f2crop = imcrop(f2);
-figure, imshowpair(f1, f2crop, 'montage');
+f2crop = f2;%imcrop(f2);
+%figure, imshowpair(f1, f2crop, 'montage');
 
 % compute cross-correlation
 xc = normxcorr2(f2crop, f1);
