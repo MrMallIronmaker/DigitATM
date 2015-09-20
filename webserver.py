@@ -48,11 +48,11 @@ class BalanceHandler(tornado.web.RequestHandler):
 
 class WithdrawHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("Hello, World!")
+        self.write("Welcome to the withdraw handler!")
 
 class DepositHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("Hello, World!")
+        self.write("Welcome to the deposit handler!")
 
 def my_app():
     return tornado.web.Application([
