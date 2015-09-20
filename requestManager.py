@@ -33,7 +33,7 @@ class RequestManager:
         payload = {
             "medium": "balance",
             "transaction_date": datetime.datetime.now().strftime("%I:%M%p %B %d, %Y"),
-            "status": "completed",
+            "status": "pending",
             "amount": amount,
             "description": "Verified with fingerprint."
         }
@@ -54,7 +54,7 @@ class RequestManager:
         payload  = {
             "medium": "balance",
             "transaction_date": str(datetime.datetime.now().strftime("%I:%M%p %B %d, %Y")),
-            "status": "completed",
+            "status": "pending",
             "amount": amount,
             "description": "Verified with fingerprint."
         }
