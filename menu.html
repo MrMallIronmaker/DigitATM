@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Digital ATM</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='styles.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h1>The Menu!</h1>
+    <a href='/balance'>Balance.</a>
+    <br>---------------------------------------------------------<br>
+    <form action="/withdraw" method="post">
+      Amount: <input type="text" name="amount"><br>
+      <input type="submit" value="Withdraw">
+    </form>
+    <br>---------------------------------------------------------<br>
+    <form action="/deposit" method="post">
+      Amount: <input type="text" name="amount"><br>
+      <input type="submit" value="Deposit">
+    </form>
+  </body>
+</html>

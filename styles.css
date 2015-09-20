@@ -1,3 +1,29 @@
-body {
+body, h1, p {
     font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    font-size: 60px;
+    color: #344153;
+}
+h2 {
+    height: 60px;
+    color: #ce2e32;
+}
+
+#bigbluebox {
+    background-color:#004477;
+}
+
+#bigredbox {
+    background-color:#ce2e32;
+}
+
+#biggraybox {
+    background-color:#344153;
+}
+
+#container {
+    width:500px;
+    text-align:center;
+    margin: 0 auto;
 }
