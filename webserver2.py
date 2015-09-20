@@ -117,7 +117,7 @@ class StyleHandler(tornado.web.RequestHandler):
     def get(self):
         data = None
         with open("styles.css", "r") as htmlfile:
-            data = htmlfile.read().replace("\n", "")
+            data = htmlfile.read() #.replace("\n", "")
         data = data if data is not None else ERROR_MESSAGE
         self.write(data)
 
