@@ -33,13 +33,15 @@ class RequestManager:
         payload = {
             "medium": "balance",
             "transaction_date": datetime.datetime.now().strftime("%I:%M%p %B %d, %Y"),
-            "status": "pending",
+            "status": "completed",
             "amount": amount,
             "description": "Verified with fingerprint."
         }
         
         URL = "http://api.reimaginebanking.com/accounts/{}/deposits?key={}".format(customerID, API_KEY)
-        request = requests.post(URL, params=payload)
+        request = requests.post(URL, data=payload)
+        for key in request.json().keys():
+            print(key, ":", request.json()[key])
 
     @staticmethod
     def withdraw(customerID, amount):
@@ -51,13 +53,14 @@ class RequestManager:
 
         payload  = {
             "medium": "balance",
-            "transaction_date": datetime.datetime.now().strftime("%I:%M%p %B %d, %Y"),
-            "status": "pending",
+            "transaction_date": str(datetime.datetime.now().strftime("%I:%M%p %B %d, %Y")),
+            "status": "completed",
             "amount": amount,
             "description": "Verified with fingerprint."
         }
-        
         URL = "http://api.reimaginebanking.com/accounts/{}/withdrawals?key={}".format(customerID, API_KEY)
-        request = requests.post(URL, params=payload)
+        request = requests.post(URL, data=payload)
+        for key in request.json().keys():
+            print(key, ":", request.json()[key])
 
 locale.setlocale( locale.LC_ALL, '' )
