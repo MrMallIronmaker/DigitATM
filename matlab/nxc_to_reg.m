@@ -1,8 +1,8 @@
 % get cross-correlation with small chunk
 
 % load images
-f1 = imread('imreg_2.bmp');
-f2 = imread('imreg_1.bmp');
+f1 = imread('imreg_1.bmp');
+f2 = imread('imreg_2.bmp');
 
 % crop
 f2crop = f2;%imcrop(f2);

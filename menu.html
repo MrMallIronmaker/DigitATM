@@ -4,50 +4,34 @@
     <meta charset="utf-8">
     <title>Digital ATM</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <script>
-    body, h1, p {
-    font-family: 'Open Sans', sans-serif;
-}
-h1 {
-    font-size: 60px;
-    color: #344153;
-}
-h2 {
-    height: 60px;
-    color: #ce2e32;
-}
-
-#bigbluebox {
-    background-color:#004477;
-}
-
-#bigredbox {
-    background-color:#ce2e32;
-}
-
-#biggraybox {
-    background-color:#344153;
-}
-
-#container {
-    width:500px;
-    text-align:center;
-    margin: 0 auto;
-}
-    </script>
   </head>
-  <body>
-    <h1>The Menu!</h1>
-    <a href='/balance'>Balance.</a>
-    <br>---------------------------------------------------------<br>
-    <form action="/withdraw" method="post">
-      Amount: <input type="text" name="amount"><br>
-      <input type="submit" value="Withdraw">
-    </form>
-    <br>---------------------------------------------------------<br>
-    <form action="/deposit" method="post">
-      Amount: <input type="text" name="amount"><br>
-      <input type="submit" value="Deposit">
-    </form>
+  <body style="background-color:#004477;">
+  	<div id="container" style="width:500px;text-align:center;margin: 0 auto;">
+        <h1 style="color:#ffffff;font-family: 'Open Sans', sans-serif;font-size: 60px;">
+            DigitATM Menu
+        </h1>
+        <br>
+        <p style="color:#ffffff;font-family: 'Open Sans', sans-serif;font-size: 20px;"> 
+        	Find your <a style="color:#cccccc;font-family: 'Open Sans', sans-serif;font-size: 20px;" href='/balance'>balance.</a>
+        </p>
+        <br> <h1 style="color:#ffffff;font-family: 'Open Sans', sans-serif;font-size: 40px;">
+        	Make a Withdrawal
+    	</h1>
+        <form action="/withdraw" method="post">
+      	<span style="color:#ffffff;font-family: 'Open Sans', sans-serif;font-size: 20px;"> Amount: </span><input type="text" name="amount">
+     			<input type="submit" value="Withdraw">
+    	</form>
+    	<br><br> <h1 style="color:#ffffff;font-family: 'Open Sans', sans-serif;font-size: 40px;">
+    		Make a Deposit
+    	</h1>
+        <form action="/deposit" method="post">
+      		<span style="color:#ffffff;font-family: 'Open Sans', sans-serif;font-size: 20px;"> Amount: </span><input type="text" name="amount">
+      		<input type="submit" value="Deposit">
+    	</form>
+    	<br><br> <h1><a href="/" style="color:#ffffff;font-family: 'Open Sans', sans-serif;font-size: 40px;">
+    		Exit DigitATM
+    	</a></h1>
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
   </body>
 </html>

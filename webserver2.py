@@ -87,7 +87,7 @@ class BalanceHandler(tornado.web.RequestHandler):
             self.write("An error occurred when attempting to get the hash value for this customer.".format(customerID))
             return
         if balance is not None:
-            self.write("Customer ID: {0}\nBalance: {1}".format(customerID, balance))
+            self.write("<span style=\"text-align:center\">Customer ID: {0}<br>Balance: {1}<br>Return to <a href=\"/menu\"> the menu</a>.</span>".format(customerID, balance))
             return
         self.write("Customer ID {0} and its corresponding hash exist. However, the balance for this customer could not be determined.".format(customerID))         
 
@@ -97,7 +97,7 @@ class WithdrawHandler(tornado.web.RequestHandler):
         amount = self.get_argument("amount", "")
         if customerID is not None:
             RequestManager.withdraw(customerID, amount)
-            self.write("Withdrew {0} from customer ID {1}'s account.".format(locale.currency(float(amount), grouping=True), customerID))
+            self.write("<span style=\"text-align:center\">Withdrew {0} from customer ID {1}'s account. Return to <a href=\"/menu\"> the menu</a>.</span>".format(locale.currency(float(amount), grouping=True), customerID))
         else:
             self.write("Although customer ID {0} exists, an error occurred when attempting to get the hash value for customer ID {0}.".format(customerID))
             return
@@ -108,7 +108,7 @@ class DepositHandler(tornado.web.RequestHandler):
         amount = self.get_argument("amount", "")
         if customerID is not None:
             RequestManager.withdraw(customerID, amount)
-            self.write("Deposited {0} in customer ID {1}'s account.".format(locale.currency(float(amount), grouping=True), customerID))
+            self.write("<span style=\"text-align:center\">Deposited {0} in customer ID {1}'s account. Return to <a href=\"/menu\"> the menu</a>.</span>".format(locale.currency(float(amount), grouping=True), customerID))
         else:
             self.write("Although customer ID {0} exists, an error occurred when attempting to get the hash value for customer ID {0}.".format(customerID))
             return
